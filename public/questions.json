@@ -1,0 +1,136 @@
+[
+  {
+    "id": 1,
+    "question": "What is ReactJS?",
+    "options": [
+      "JavaScript framework",
+      "JavaScript library",
+      "Programming language"
+    ],
+    "answer": "JavaScript library"
+  },
+  {
+    "id": 2,
+    "question": "Which command is used to create a new React project?",
+    "options": [
+      "create-react-app my-app",
+      "react-create-app my-app",
+      "create-react-project my-app"
+    ],
+    "answer": "create-react-app my-app"
+  },
+  {
+    "id": 3,
+    "question": "Which command will install React Router?",
+    "options": [
+      "npm install react-router-dom",
+      "npm install react-router",
+      "npm install router-dom"
+    ],
+    "answer": "npm install react-router-dom"
+  },
+  {
+    "id": 4,
+    "question": "What is JSX?",
+    "options": [
+      "A function in React",
+      "Syntax for writing HTML in JavaScript",
+      "CSS in JavaScript"
+    ],
+    "answer": "Syntax for writing HTML in JavaScript"
+  },
+  {
+    "id": 5,
+    "question": "What is the virtual DOM?",
+    "options": [
+      "A copy of the real DOM",
+      "A type of browser API",
+      "A method to directly manipulate the DOM"
+    ],
+    "answer": "A copy of the real DOM"
+  },
+  {
+    "id": 6,
+    "question": "What is the use of keys in React?",
+    "options": [
+      "To identify elements in a list",
+      "To add styling to elements",
+      "To handle component state"
+    ],
+    "answer": "To identify elements in a list"
+  },
+  {
+    "id": 7,
+    "question": "Which method in a React component is used to change the state?",
+    "options": ["setState()", "changeState()", "updateState()"],
+    "answer": "setState()"
+  },
+  {
+    "id": 8,
+    "question": "Which hook is used to handle state in functional components?",
+    "options": ["useState", "useEffect", "useContext"],
+    "answer": "useState"
+  },
+  {
+    "id": 9,
+    "question": "What is the purpose of useEffect hook?",
+    "options": [
+      "To handle side effects",
+      "To manage state",
+      "To create context"
+    ],
+    "answer": "To handle side effects"
+  },
+  {
+    "id": 10,
+    "question": "What is a higher-order component in React?",
+    "options": [
+      "A component that returns another component",
+      "A built-in React component",
+      "A component with more props"
+    ],
+    "answer": "A component that returns another component"
+  },
+  {
+    "id": 11,
+    "question": "How do you pass data from parent to child component?",
+    "options": ["Using props", "Using state", "Using context"],
+    "answer": "Using props"
+  },
+  {
+    "id": 12,
+    "question": "What is the purpose of the React Fragment?",
+    "options": [
+      "To wrap multiple elements without adding extra nodes to the DOM",
+      "To style elements",
+      "To handle events"
+    ],
+    "answer": "To wrap multiple elements without adding extra nodes to the DOM"
+  },
+  {
+    "id": 13,
+    "question": "What does ReactDOM.render() do?",
+    "options": [
+      "Renders a React element into the DOM",
+      "Creates a new component",
+      "Updates the state"
+    ],
+    "answer": "Renders a React element into the DOM"
+  },
+  {
+    "id": 14,
+    "question": "How do you handle events in React?",
+    "options": [
+      "Using event listeners",
+      "Using inline event handlers",
+      "Using component methods"
+    ],
+    "answer": "Using component methods"
+  },
+  {
+    "id": 15,
+    "question": "What is Redux primarily used for in React?",
+    "options": ["State management", "Routing", "Styling"],
+    "answer": "State management"
+  }
+]
