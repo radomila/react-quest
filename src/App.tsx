@@ -1,7 +1,7 @@
-import Card from './components/Card/Card';
+import CourseContainer from './components/CourseContainer/CourseContainer';
 
 function App() {
-  return <Card></Card>;
+  return <CourseContainer />;
 }
 
 export default App;
