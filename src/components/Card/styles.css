@@ -41,3 +41,7 @@ h2 {
   display: flex;
   justify-content: center;
 }
+
+input[type='radio'] {
+  accent-color: #5f5a5a;
+}

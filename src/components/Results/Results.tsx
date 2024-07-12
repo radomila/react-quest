@@ -22,7 +22,7 @@ const Results = ({ correctAnswers, numQuestions }: ResultsProps) => {
 
   return (
     <div className="results-container">
-      <h1>{result}</h1>
+      <h2>{result}</h2>
     </div>
   );
 };

@@ -45,7 +45,7 @@ const Card = ({
   };
 
   // Checking if the user's answer is checked
-  const isQuestionChecked = (e) => {
+  const isQuestionChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
     setIsChecked(true);
     setSelectedOption(e.target.value);
   };
