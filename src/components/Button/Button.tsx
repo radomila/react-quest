@@ -1,19 +1,26 @@
 import './styles.css';
 
 interface ButtonProps {
+  type?: 'primary' | 'secondary';
   text: string;
   disabled: boolean;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
-const Button = ({ text, onClick, disabled }: ButtonProps) => {
-  const disabledButtonColor = disabled && 'disabled';
+const Button = ({
+  type = 'primary',
+  text,
+  onClick,
+  disabled = false,
+}: ButtonProps) => {
+  const disabledButtonColor = disabled ? 'disabled' : '';
+  const buttonType = type === 'secondary' ? 'secondary' : 'primary';
 
   return (
     <button
       onClick={onClick}
       disabled={disabled}
-      className={`button-${disabledButtonColor}`}
+      className={`${disabledButtonColor} ${buttonType}`}
     >
       {text}
     </button>

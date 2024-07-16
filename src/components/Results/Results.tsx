@@ -1,3 +1,4 @@
+import Button from '../Button/Button';
 import './styles.css';
 
 interface ResultsProps {
@@ -23,6 +24,14 @@ const Results = ({ correctAnswers, numQuestions }: ResultsProps) => {
   return (
     <div className="results-container">
       <h2>{result}</h2>
+      <p className="results-caption">
+        To see the answers with the explanation or repeat the course, please
+        click one of the buttons bellow.{' '}
+      </p>
+      <div className="results-buttons">
+        <Button type="secondary" text="answers" disabled={false} />
+        <Button type="secondary" text="repeat" disabled={false} />
+      </div>
     </div>
   );
 };

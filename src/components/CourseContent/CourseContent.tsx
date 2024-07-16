@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import './styles.css';
+
+import questions from '../../../public/questions.json';
 import Card from '../Card/Card';
 import Results from '../Results/Results';
-import questions from '../../../public/questions.json';
+import QuestionItem from '../QuestionItem/QuestionItem';
 
 const CourseContainer = () => {
   const [isCourseCompleted, setIsCourseCompleted] = useState<boolean>(false);
@@ -19,21 +20,21 @@ const CourseContainer = () => {
   };
 
   return (
-    <>
+    <Card>
       {isCourseCompleted ? (
         <Results
           correctAnswers={correctAnswers}
           numQuestions={numberOfQuestions}
         />
       ) : (
-        <Card
-          correctAnswers={correctAnswers}
-          setCorrectAnswers={handleCorrectAnswers}
+        <QuestionItem
           numberOfQuestions={numberOfQuestions}
           onCourseCompleted={handleCourseCompleted}
+          correctAnswers={correctAnswers}
+          setCorrectAnswers={handleCorrectAnswers}
         />
       )}
-    </>
+    </Card>
   );
 };
 

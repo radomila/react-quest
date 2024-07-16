@@ -1,7 +1,7 @@
-import CourseContainer from './components/CourseContainer/CourseContainer';
+import CourseContent from './components/CourseContent/CourseContent';
 
 function App() {
-  return <CourseContainer />;
+  return <CourseContent />;
 }
 
 export default App;

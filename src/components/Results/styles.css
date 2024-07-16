@@ -8,3 +8,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.results-caption {
+  color: #5f5a5a;
+  font-size: 18px;
+  text-align: center;
+  width: 600px;
+}
+
+.results-buttons {
+  display: flex;
+  gap: 20px;
+}
