@@ -4,9 +4,14 @@ import './styles.css';
 interface ResultsProps {
   correctAnswers: string[];
   numQuestions: number;
+  onHandleResetCourse: () => void;
 }
 
-const Results = ({ correctAnswers, numQuestions }: ResultsProps) => {
+const Results = ({
+  correctAnswers,
+  numQuestions,
+  onHandleResetCourse,
+}: ResultsProps) => {
   let emojiReaction;
   const numCorrectAnswers = correctAnswers.length;
   const percentage = Math.ceil((numCorrectAnswers * 100) / numQuestions);
@@ -30,7 +35,12 @@ const Results = ({ correctAnswers, numQuestions }: ResultsProps) => {
       </p>
       <div className="results-buttons">
         <Button type="secondary" text="answers" disabled={false} />
-        <Button type="secondary" text="repeat" disabled={false} />
+        <Button
+          type="secondary"
+          text="repeat"
+          disabled={false}
+          onClick={onHandleResetCourse}
+        />
       </div>
     </div>
   );

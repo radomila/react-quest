@@ -11,6 +11,11 @@ const CourseContainer = () => {
 
   const numberOfQuestions = questions.length;
 
+  const handleResetCourse = () => {
+    setIsCourseCompleted(false);
+    setCorrectAnswers([]);
+  };
+
   const handleCourseCompleted = () => {
     setIsCourseCompleted(true);
   };
@@ -25,6 +30,7 @@ const CourseContainer = () => {
         <Results
           correctAnswers={correctAnswers}
           numQuestions={numberOfQuestions}
+          onHandleResetCourse={handleResetCourse}
         />
       ) : (
         <QuestionItem
