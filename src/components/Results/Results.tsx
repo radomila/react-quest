@@ -1,5 +1,5 @@
 import Button from '../Button/Button';
-import './styles.css';
+import styles from './Results.module.css';
 
 interface ResultsProps {
   correctAnswers: string[];
@@ -27,13 +27,13 @@ const Results = ({
   const result = `Your overall score is ${percentage}% ${emojiReaction} `;
 
   return (
-    <div className="results-container">
+    <div className={styles.container}>
       <h2>{result}</h2>
-      <p className="results-caption">
+      <p className={styles.caption}>
         To see the answers with the explanation or repeat the course, please
         click one of the buttons bellow.{' '}
       </p>
-      <div className="results-buttons">
+      <div className={styles.buttons}>
         <Button type="secondary" text="answers" disabled={false} />
         <Button
           type="secondary"

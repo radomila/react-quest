@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import questions from '../../../public/questions.json';
 import Card from '../Card/Card';
 import Results from '../Results/Results';
