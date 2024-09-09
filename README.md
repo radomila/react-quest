@@ -1,30 +1,12 @@
-# React + TypeScript + Vite
+# React Quiz
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React Quiz is a simple web application that helps users test their knowledge of the ReactJS library. The quiz consists of 15 questions, and upon completion, the result is displayed as a percentage with the option to retake the quiz. In a future update, users will also be able to review a list of all answered questions, both correct and incorrect.
 
-Currently, two official plugins are available:
+- The project uses TypeScript in order to improve my knowledge of type safety and ensure more reliable code.
+- CSS modules are used throughout the application in order to maintain modular and reusable styles.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Future improvements
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Instead of loading data directly from a JSON file, I aim to fetch it from an API to simulate real-world scenarios and improve my experience with asynchronous data handling in React.
+- Add various difficulty levels for the quiz.
+- Use local storage to save quiz results.
