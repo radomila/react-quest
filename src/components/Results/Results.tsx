@@ -1,12 +1,17 @@
 import Button from '../Button/Button';
-import './styles.css';
+import styles from './Results.module.css';
 
 interface ResultsProps {
   correctAnswers: string[];
   numQuestions: number;
+  onHandleResetCourse: () => void;
 }
 
-const Results = ({ correctAnswers, numQuestions }: ResultsProps) => {
+const Results = ({
+  correctAnswers,
+  numQuestions,
+  onHandleResetCourse,
+}: ResultsProps) => {
   let emojiReaction;
   const numCorrectAnswers = correctAnswers.length;
   const percentage = Math.ceil((numCorrectAnswers * 100) / numQuestions);
@@ -22,15 +27,20 @@ const Results = ({ correctAnswers, numQuestions }: ResultsProps) => {
   const result = `Your overall score is ${percentage}% ${emojiReaction} `;
 
   return (
-    <div className="results-container">
+    <div className={styles.container}>
       <h2>{result}</h2>
-      <p className="results-caption">
+      <p className={styles.caption}>
         To see the answers with the explanation or repeat the course, please
         click one of the buttons bellow.{' '}
       </p>
-      <div className="results-buttons">
+      <div className={styles.buttons}>
         <Button type="secondary" text="answers" disabled={false} />
-        <Button type="secondary" text="repeat" disabled={false} />
+        <Button
+          type="secondary"
+          text="repeat"
+          disabled={false}
+          onClick={onHandleResetCourse}
+        />
       </div>
     </div>
   );
