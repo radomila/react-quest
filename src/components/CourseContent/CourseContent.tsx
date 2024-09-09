@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import questions from '../../../public/questions.json';
 import Card from '../Card/Card';
 import Results from '../Results/Results';
@@ -10,6 +9,11 @@ const CourseContainer = () => {
   const [correctAnswers, setCorrectAnswers] = useState<string[]>([]);
 
   const numberOfQuestions = questions.length;
+
+  const handleResetCourse = () => {
+    setIsCourseCompleted(false);
+    setCorrectAnswers([]);
+  };
 
   const handleCourseCompleted = () => {
     setIsCourseCompleted(true);
@@ -25,6 +29,7 @@ const CourseContainer = () => {
         <Results
           correctAnswers={correctAnswers}
           numQuestions={numberOfQuestions}
+          onHandleResetCourse={handleResetCourse}
         />
       ) : (
         <QuestionItem

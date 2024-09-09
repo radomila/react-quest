@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import questions from '../../../public/questions.json';
 import Button from '../Button/Button';
-import './styles.css';
+import styles from './QuestionItem.module.css';
 
 interface QuestionItemProps {
   onCourseCompleted: () => void;
@@ -49,14 +49,14 @@ const QuestionItem = ({
 
   return (
     <>
-      <h2>{currentQuestion.question}</h2>
+      <h2 className={styles.questionHeader}>{currentQuestion.question}</h2>
       {currentQuestion.options.map((option: string, index: number) => (
-        <ul className="card-options" key={index}>
+        <ul className={styles.options} key={index}>
           <li>
             <input
               type="radio"
               name="option"
-              className="card-radio"
+              className={styles.radio}
               value={option}
               checked={selectedOption === option}
               onChange={isQuestionChecked}
@@ -65,8 +65,9 @@ const QuestionItem = ({
           </li>
         </ul>
       ))}
-      <div className="button-section">
+      <div className={styles.buttonSection}>
         <Button
+          type="primary"
           text={isCourseFinished}
           onClick={handleNextQuestion}
           disabled={!isChecked}

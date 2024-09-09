@@ -1,28 +1,28 @@
-h2 {
+.questionHeader {
   text-align: center;
 }
 
-.card-options {
+.options {
   list-style-type: none;
 }
 
-.card-options li {
+.options li {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.card-radio {
+.radio {
   width: 30px;
   height: 30px;
   cursor: pointer;
 }
 
-.button-section {
+.buttonSection {
   display: flex;
   justify-content: center;
 }
 
 input[type='radio'] {
-  accent-color: #5f5a5a;
+  accent-color: var(--color-radio-option);
 }
